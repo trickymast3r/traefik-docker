@@ -51,8 +51,3 @@ http:
         referrerPolicy: same-origin
         featurePolicy: vibrate 'self'
         stsSeconds: 315360000
-
-    authentification:
-      basicAuth:
-        users: # admon / totolasticot
-          - admon:$2y$10$4IgUsvlCwENsF18B9t7AoegQ7eWZVfWxPFRhNfBWz7F00h1X2oZFe
