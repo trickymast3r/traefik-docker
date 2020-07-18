@@ -51,3 +51,8 @@ http:
         referrerPolicy: same-origin
         featurePolicy: vibrate 'self'
         stsSeconds: 315360000
+
+    authentification:
+      basicAuth:
+        users:
+          - admin:$2y$12$TMQ3ylztOvZzHON2zXBi.uluPJLQ0VO8yG.RZc4hrv0M39gr.rTQ.
