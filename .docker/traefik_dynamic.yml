@@ -18,6 +18,13 @@ tls:
         - CurveP384
 
 http:
+  routers:
+    dashboard:
+      rule: Host(`localhost`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
+      entryPoints: web
+      service: api@internal
+      middlewares:
+        - auth
   middlewares:
     compression:
       compress:
@@ -52,7 +59,7 @@ http:
         featurePolicy: vibrate 'self'
         stsSeconds: 315360000
 
-    authentification:
+    auth:
       basicAuth:
         users:
           - admin:$2y$12$TMQ3ylztOvZzHON2zXBi.uluPJLQ0VO8yG.RZc4hrv0M39gr.rTQ.

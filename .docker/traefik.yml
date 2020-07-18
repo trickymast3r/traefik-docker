@@ -3,14 +3,15 @@ global:
   checkNewVersion: false
 
 api:
-  insecure: true
+  # entryPoint: web
+  insecure: false
   dashboard: true
   debug: true
 
 log:
   #  filePath: "/etc/traefik/applog.log"
   #  format: json
-  level: DEBUG
+  level: WARNING
 
 providers:
   docker:
