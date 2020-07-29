@@ -21,7 +21,8 @@ http:
   routers:
     dashboard:
       rule: Host(`localhost`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
-      entryPoints: web
+      entryPoints:
+        - web
       service: api@internal
       middlewares:
         - auth
